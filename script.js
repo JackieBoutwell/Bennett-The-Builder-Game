@@ -1,22 +1,62 @@
-import "./styles.css";
+const deck = document.querySelectorAll(".memory-card");
 
-const rows = 5;
-const cols = 10;
+let firstCard, secondCard;
 
-const app = document.getElementById("app");
-const table = document.createElement("table");
 
-for (let r = 0; r < rows; r++) {
-  const tr = document.createElement("tr");
-  for (let c = 0; c < cols; c++) {
-    const td = document.createElement("td");
 
-    // Sneak peek at what's coming next!
-    // After creating an element, it needs
-    // to be added to the DOM tree.
-    tr.appendChild(td);
+// Random shuffle.
+function shuffle() {
+    // let srcImg = []
+    deck.forEach((card) => { 
+    //   srcImg.push(card.src.split("images")[1])
+    let randomPos = Math.floor(Math.random() * 15);
+    card.style.order = randomPos;
+    });
+    // console.log(srcImg)
+};
+shuffle()
+
+deck.forEach((card) => card.addEventListener("click", flipCard));
+
+function flipCard() {
+  if (this === firstCard) return;
+  this.classList.add("flip");
+
+  if (!hasFlippedCard) {
+    // first click
+    hasFlippedCard = true;
+    firstCard = this;
+    startTime();
+    return;
   }
-  table.appendChild(tr);
+  //second click
+  secondCard = this;
+  checkForMatch();
 }
 
-app.appendChild(table);
+function checkForMatch() {
+  let isMatch = firstCard.dataset.id === secondCard.dataset.id;
+  isMatch ? disableCards() : unFlipCards();
+}
+
+// cards.forEach((card) => card.addEventListener("click", flipCard));
+
+
+// document.getElementById('bbbbbb').addEventListener("click", function () {
+//     document.getElementById('bbbbbb').src="./images/level.png";
+//     this.style.backgroundColor = "#FFFFFF";
+// });
+
+
+// document.querySelector('container').addEventListener("click", function (event) {
+//     event.target
+    
+//     // document.getElementById('level').src="./images/level.png";
+//     // this.style.backgroundColor = "#FFFFFF";
+// });
+
+// document.addEventListener('click', function (card) {
+//     console.log(card.target);
+
+// });
+
