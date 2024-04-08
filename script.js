@@ -1,9 +1,13 @@
 const deck = document.querySelectorAll(".memory-card");
 const again = document.querySelector(".again");
+const startTimer = 10;
+// const timeBox = document.querySelector("#timer")
+// timeBox.innerText = 0 
 
 let firstCard, secondCard;
 let hasFlippedCard = false;
-
+let time = startTimer * 0;
+console.log("jel")
 // Random shuffle.
 function shuffle() {
     // let srcImg = []
@@ -19,6 +23,11 @@ shuffle()
 deck.forEach((card) => card.addEventListener("click", flipCard));
 
 function flipCard() {
+  console.log(this.querySelector("img").src)
+  this.classList.add("face");
+  this.querySelector("img").src = "./images/blackbox.png";
+  console.log()
+    // this.style.backgroundColor = "#FFFFFF";
   if (this === firstCard) return;
   this.classList.add("flip");
 
@@ -26,19 +35,51 @@ function flipCard() {
     // first click
     hasFlippedCard = true;
     firstCard = this;
-    startTime();
+    // startTime();
     return;
   }
-  //second click
   secondCard = this;
   checkForMatch();
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.id === secondCard.dataset.id;
+  console.log("jj")
+  let isMatch = firstCard.src === secondCard.src;
   isMatch ? disableCards() : unFlipCards();
 }
 
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+
+}
+
+
+
+// function resetBoard() {
+//    [hasFlippedCard, lockBoard] = [false, false];
+//   [firstCard, secondCard] = [null, null];
+// }
+
+
+// function startTime() {
+//   let time = 0
+//   setInterval(() => {
+//     console.log(time)
+//     timeBox.innerText = time 
+//     time++
+//   },1000)
+  // if (this === -1) {
+
+  //   interval = setInterval(function () {
+  //     final.innerHTML = "You won in " + finalTime + " time!";
+  //     finalTime = minute.innerHTML + ":" + second.innerHTML;
+  //     totalSeconds++;
+  //     second.innerHTML = pad(totalSeconds % 60);
+  //     minute.innerHTML = pad(parseInt(totalSeconds / 60));
+  //   }, 1000);
+  // // }
+  // click = 1;
 
 // cards.forEach((card) => card.addEventListener("click", flipCard));
 
@@ -69,5 +110,3 @@ again.addEventListener("click", function () {
 
     //display block when i want to call again.
 });
-
-console.log()
