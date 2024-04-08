@@ -72,21 +72,23 @@
     <div id="gamebox">
                     <div class="middle-container">
                         <div class="memory-card" class="front-face" class="back-face"><img class="paint" src="./images/paint.png" alt="paint bucket" width="100px" height="100px"></div>
-                        <div class="memory-card" class="front-face" class="back-face"><img class="wrench" src="./images/wrench.png" alt="wrench" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="skate" src="./images/skate.png" alt="skate board" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="hammer" src="./images/hammer.png" alt="hammer" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="fork" src="./images/fork.png" alt="fork" width="100px" height="100px"></div>
-                        <div class="memory-card" class="front-face" class="back-face"><img class="drill" src="./images/drill.png" alt="drill" width="100px" height="100px"></div>
-                        <div class="memory-card" class="front-face" class="back-face"><img class="saw" src="./images/saw.png" alt="saw" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="screwdriver" src="./images/screwdriver.png" alt="screw driver" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="stapler" src="./images/stapler.png" alt="stapler" width="100px" height="100px"></div>
-                        <div class="memory-card" class="front-face" class="back-face"><img class="tapem" src="./images/tapem.png" alt="tape measure" width="100px" height="100px"></div>
+                        
                         <div class="memory-card" class="front-face" class="back-face"><img class="coffee" src="./images/coffee.png" alt="coffee cup" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="bananas" src="./images/bananas.png" alt="bananas" width="100px" height="100px"></div>
                         <div class="memory-card" class="front-face" class="back-face"><img class="bananas" src="./images/bananas.png" alt="bananas" width="100px" height="100px"></div>
-                        <div class="memory-card" class="front-face" class="back-face"><img class="duct" src="./images/tape.png" alt="duct tape" width="100px" height="100px"></div>
+                        <!-- <div class="memory-card" class="front-face" class="back-face"><img class="duct" src="./images/tape.png" alt="duct tape" width="100px" height="100px"></div> -->
+
+                        <!-- <div class="memory-card" class="front-face" class="back-face"><img class="drill" src="./images/drill.png" alt="drill" width="100px" height="100px"></div>
+                        <div class="memory-card" class="front-face" class="back-face"><img class="saw" src="./images/saw.png" alt="saw" width="100px" height="100px"></div> -->
                         <!-- <div class="memory-card" class="front-face" class="back-face"><img class="apple" src="./images/apple.png" alt="red apple" width="100px" height="100px"></div> -->
                         <!-- <div class="memory-card-flip" class="front-face" class="back-face"><img id="crayon" src="./images/crayon.png" alt="crayon" width="100px" height="100px"></div>
+                            <div class="memory-card" class="front-face" class="back-face"><img class="wrench" src="./images/wrench.png" alt="wrench" width="100px" height="100px"></div>
+                            <div class="memory-card" class="front-face" class="back-face"><img class="tapem" src="./images/tapem.png" alt="tape measure" width="100px" height="100px"></div>
                         <div class="memory-card-flip" class="front-face" class="back-face"><img id="nails" src="./images/nails.png" alt="nails" width="100px" height="100px"></div>
                         <div class="memory-card-flip" class="front-face" class="back-face"><img id="metal clamp" src="./images/clamp.png" alt="metal clamp" width="100px" height="100px"></div>
                         <div class="memory-card-flip" class="front-face" class="back-face"><img id="wood" src="./images/blackmemory-card-flip.png" alt="plank of wood" width="100px" height="100px"></div>
@@ -94,13 +96,29 @@
                         <div class="memory-card" class="front-face" class="back-face"><img class="level" src="./images/level.png" alt="level" width="100px" height="100px"></div>
                     </div>
         </div>
-            <div id="benbox"> <img class="bennett" src="./images/bennett0.png" alt="Cartoon Construction Worker"
-                    width="350" height="350"></div>
+            <div id="endbox">
+                <div id="benbox">
+                    <img class="bennett" src="./images/bennett0.png" alt="Cartoon Construction Worker" width="350" height="350">
+                </div>
+                <!-- <div id=""toolbox">
+                    <img id="toolbox" src="./images/empty.png" alt="Empty tool box" width="200" height="200">
+                </div> -->
+
+                    <div id="levelbox">
+                        <p>Pick a level!</p>
+                         <img class="bennett" src="./images/01.png" alt="red star with number 1 inside" width="80" height="80">
+                            <img class="bennett" src="./images/02.png" alt="red star with number 2 inside" width="90" height="90">
+                            <img class="bennett" src="./images/03.png" alt="red star with number 3 inside" width="80" height="80">
+                            <img class="bennett" src="./images/04.png" alt="red star with number 4 inside" width="80" height="80">
+                       </div>
+                    </div>
+
+            </div>          
         </div>
     </div>
 </div>
 
-<!-- <section id="endLevelSection" class="hidden">
+<section id="endLevelSection" class="hidden">
         <div id="endLevelDiv">
                 <img src="./images/full.png" alt="full tool box">
                 <p class="final">
@@ -115,8 +133,9 @@
                         <button type="button" id="btnAgain">Play again?!</button>
                 </p>
         </div>
-</section> -->
+</section>
 
 <script src="script.js"></script>
+<script src='js/timer.js'></script>
 
 </html>

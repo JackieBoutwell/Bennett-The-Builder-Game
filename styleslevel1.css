@@ -12,7 +12,7 @@ h1 {
   flex-direction: row;
 }
 
-#benbox {
+#endbox {
   /* height: 100%; */
   width: 25%;
   border: 5px solid pink;
@@ -93,6 +93,22 @@ h1 {
   width: 200px;
 }
 
-.endLevelDiv p {
+#endLevelDiv p {
   text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.levelBox {
+  border: 5px solid pink;
+    background-color: #ffdd95;
+      height: 30px;
+        width: 200px;
+
 }

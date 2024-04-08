@@ -2,6 +2,7 @@ const deck = document.querySelectorAll(".memory-card");
 const again = document.querySelector(".again");
 
 let firstCard, secondCard;
+let hasFlippedCard = false;
 
 // Random shuffle.
 function shuffle() {
@@ -38,6 +39,7 @@ function checkForMatch() {
   isMatch ? disableCards() : unFlipCards();
 }
 
+
 // cards.forEach((card) => card.addEventListener("click", flipCard));
 
 
@@ -60,9 +62,12 @@ function checkForMatch() {
 // });
 
 
-// again.addEventListener("click", function () {
-//   endLevelSection.classList.replace("show", "hidden");
-//   location.reload();
-// });
+again.addEventListener("click", function () {
+  endLevelSection.classList.replace("show", "hidden");
+    location.reload();
+       // document.getElementById("endLevelSection").style.display = "none";
 
-// console.log()
+    //display block when i want to call again.
+});
+
+console.log()
