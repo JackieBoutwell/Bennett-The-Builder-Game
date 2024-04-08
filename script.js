@@ -1,8 +1,7 @@
 const deck = document.querySelectorAll(".memory-card");
+const again = document.querySelector(".again");
 
 let firstCard, secondCard;
-
-
 
 // Random shuffle.
 function shuffle() {
@@ -60,3 +59,10 @@ function checkForMatch() {
 
 // });
 
+
+// again.addEventListener("click", function () {
+//   endLevelSection.classList.replace("show", "hidden");
+//   location.reload();
+// });
+
+// console.log()
