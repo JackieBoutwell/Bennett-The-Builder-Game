@@ -11,10 +11,14 @@ console.log("jel")
 // Random shuffle.
 function shuffle() {
     // let srcImg = []
-    deck.forEach((card) => { 
+  deck.forEach((card) => { 
+    let blackbox = document.createElement("img");
+    blackbox.classList = "blkbox";
+    blackbox.src = "./images/blackbox.png";
+    card.appendChild(blackbox);
     //   srcImg.push(card.src.split("images")[1])
     let randomPos = Math.floor(Math.random() * 15);
-    card.style.order = randomPos;
+      card.style.order = randomPos;
     });
     // console.log(srcImg)
 };
@@ -24,9 +28,11 @@ deck.forEach((card) => card.addEventListener("click", flipCard));
 
 function flipCard() {
   console.log(this.querySelector("img").src)
+  this.querySelector("img").classList.remove("hidden");
+  this.querySelector(".blkbox").classList.add("hidden");
   this.classList.add("face");
-  this.querySelector("img").src = "./images/blackbox.png";
-  console.log()
+  //this.querySelector("img").src = "./images/blackbox.png";
+  //console.log()
     // this.style.backgroundColor = "#FFFFFF";
   if (this === firstCard) return;
   this.classList.add("flip");

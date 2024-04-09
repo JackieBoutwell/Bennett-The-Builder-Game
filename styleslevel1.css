@@ -62,21 +62,17 @@ h1 {
   border: 5px solid pink;
   background-color: #ffdd95;
 }
-.box1 {
+.blkbox {
+  height: 100px;
+  width: 100px;
+  /* background-color: #ffff; */
+}
+
+/* .box2 {
   height: 100px;
   width: 100px;
   background-color: #ffff;
-}
-
-.box2 {
-  height: 100px;
-  width: 100px;
-  background-color: #ffff;
-}
-
-.back-face {
-  background-color: #456b91;
-}
+} */
 
 #endLevelSection {
   position: fixed;
