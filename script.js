@@ -98,7 +98,7 @@ function gameWon() {
 
 again.addEventListener("click", function () {
   endLevelSection.classList.replace("show", "hidden");
-    location.reload();
+    window.location.reload();
        // document.getElementById("endLevelSection").style.display = "none";
     //display block when i want to call again.
 });
