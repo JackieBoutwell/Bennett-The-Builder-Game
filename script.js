@@ -3,7 +3,7 @@ const again = document.querySelector(".again");
 const startTimer = 10;
 // const timeBox = document.querySelector("#timer")
 // timeBox.innerText = 0 
-
+let timesHamerCLicked = 0
 let firstCard, secondCard;
 let hasFlippedCard = false;
 let time = startTimer * 0;
@@ -33,7 +33,9 @@ function flipCard() {
   this.classList.add("face");
   //this.querySelector("img").src = "./images/blackbox.png";
   //console.log()
-    // this.style.backgroundColor = "#FFFFFF";
+  // this.style.backgroundColor = "#FFFFFF";
+  console.log(this.querySelector("img").alt,'alt')
+  if(this.querySelector("img").alt ==="hammer") timesHamerCLicked++
   if (this === firstCard) return;
   this.classList.add("flip");
 
@@ -46,6 +48,10 @@ function flipCard() {
   }
   secondCard = this;
   checkForMatch();
+
+  if (timesHamerCLicked === 2) {
+     endLevelSection.classList.replace("hidden", "show");
+  }
 }
 
 function checkForMatch() {
@@ -68,6 +74,7 @@ function unFlipCards() {
   };
 
 function gameWon() {
+  console.log(timesHamerCLicked)
   // let click = -1;
   // if (click < 1) {
   //   firstCard = etarget;
